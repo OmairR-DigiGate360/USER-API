@@ -10,38 +10,27 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	private String firstName;
-	private String lastName;
+	private String firstname;
+	private String lastname;
 	private String email;
 	private String phone;
-	public User(int id, String firstName, String lastName, String email, String phone) {
-		super();
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.phone = phone;
-	}
-	public User() {
-		super();
-	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getFirstName() {
-		return firstName;
+	public String getFirstname() {
+		return firstname;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
-	public String getLastName() {
-		return lastName;
+	public String getLastname() {
+		return lastname;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 	public String getEmail() {
 		return email;
@@ -55,9 +44,16 @@ public class User {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", phone=" + phone + "]";
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
+	public User(int id, String firstname, String lastname, String email, String phone) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+		this.phone = phone;
+	}	
 }
